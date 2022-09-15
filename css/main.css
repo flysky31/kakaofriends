@@ -61,6 +61,7 @@ h1 a {
   width:147px; height:24px;
   background-image:url('../img/logo_kakaofriends.png');
   background-size:147px 24px;
+  margin: 15px 0 0;
 }
 h1 a span { display:none; }
 
