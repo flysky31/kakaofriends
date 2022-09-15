@@ -1,0 +1,666 @@
+@charset "UTF-8";
+
+body{
+  overflow: inherit;
+}
+
+body.on{
+  overflow: hidden;
+}
+.ico_friends { 
+  display:block;
+  background:url("../img/ico_friends.png") no-repeat 0 0 / 700px 800px;
+  font-size:0; 
+  overflow: hidden;
+}
+.ico_dot{
+  display:inline-block;
+  width:10px; 
+  height:10px;
+  background: #ec4217;
+  font-size:0; 
+    border-radius:50%;
+  border:2px solid #fff;
+}
+button {
+   border:0; 
+  background:none;
+  cursor:pointer;
+}
+
+
+
+
+#container {
+  max-width:640px; min-width:270px;
+  height:2000px;
+  margin:0 auto;
+  /* background-image:linear-gradient(to bottom, #fff 40%, #e071d1 75%, #ec4217); */
+}
+
+header { 
+  position:fixed; top:0; left:0; right:0;
+  max-width:640px; min-width:270px;
+  margin:0 auto;
+  background: #fff;
+  border-bottom: 1px solid  #d7d7d7;
+}
+header .header_inner{
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+
+}
+h1 { 
+  text-align: center;   
+
+}
+h1 a { 
+  display:inline-block;
+  width:147px; height:24px;
+  background-image:url('../img/logo_kakaofriends.png');
+  background-size:147px 24px;
+}
+h1 a span { display:none; }
+
+.ico_gnb_menu { 
+  width:24px; height:24px;
+  background-position: -520px -60px;
+}
+
+/* .top_left, .top_right { 
+  height: 45px;
+  line-height: 57px;
+} */
+
+.top_left {
+
+}
+.top_left > button { 
+  padding: 0 0 0 10px;
+  position: relative;
+  margin: 10px 0 0;
+}
+.top_left .ico_dot {
+  position:absolute;
+  top:0;
+  right:0;
+}
+
+.top_right { 
+
+}
+.top_right > button:first-child{
+  padding: 0 5px 0 0;
+}
+.top_right > button { 
+  padding:0 10px 0 0;
+  margin: 10px 0 0;
+}
+.top_right .ico_search{
+  width: 24px;
+  height: 24px;
+  background-position: -40px -20px;
+}
+.top_right .ico_global{
+  width: 24px;
+  height: 24px;
+  background-position: -440px -60px;
+}
+
+.list_tab { 
+  display:flex;
+  height: 45px;
+}
+.list_tab li { 
+  flex:1;
+  text-align:center;
+}
+.list_tab li:nth-child(2){
+  border-bottom: 3px solid #000;
+}
+.list_tab li a { 
+  display:block; 
+  line-height:43px;
+  position: relative;
+}
+
+.list_tab li a .ico_dot{
+  position:absolute;
+  top: 10px;
+}
+
+
+main{
+  margin-top: 90px;
+}
+
+section{
+  padding: 20px;
+}
+.title {
+  margin-bottom: 20px;
+}
+.title a img{
+  border-radius: 15px;
+  width: 40px;
+}
+.title span{
+  display: inline-block;
+  color: #888;
+  font-size: 13px;
+  margin-left: 5px;
+}
+.title span b{
+  display: block;
+  color: #000;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.cont_box img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.cont_box .a_box{
+  display: block;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: 10px 0;
+  position: relative;
+}
+.cont_box .a_box a{
+  font-weight: bold;
+  display: block;
+  font-size: 14px;
+  position: relative;
+  padding: 15px 10px;
+}
+.cont_box .a_box a::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top:19px;
+  right: 15px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #000;
+  transform: rotate(45deg);
+  border-left: 0;
+  border-bottom: 0;
+}
+
+
+.gnb{
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  background: #fff;
+  z-index: 1;
+  top: 0;
+  left: -300px;
+  transition: all .3s;
+  overflow-y: scroll;
+  height: 100%;
+}
+.gnb.on{
+  left:0;
+}
+
+.back{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .6);
+  display: none;
+
+}
+.gnb .inner{
+  padding: 30px 0;
+
+}
+
+.gnb::-webkit-scrollbar{
+  width: 3px;
+}
+.gnb::-webkit-scrollbar-thumb{
+  background-color: #000;
+  border-radius: 50px;
+}
+.gnb .login a span{
+  text-decoration:underline;
+}
+.gnb .login{
+  padding: 0 20px;
+}
+.gnb .login a:first-child{
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+.gnb .login a:last-child{
+  font-size: 13px;
+  font-weight: bold;
+  overflow-x: hidden;
+}
+.gnb .basket{
+  margin: 50px 0 30px;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0 20px;
+}
+
+.gnb .basket a{
+  display: block;
+  margin-bottom: 30px;
+
+}
+.gnb ul > li:nth-child(2),
+.gnb ul > li:nth-child(4),
+.gnb ul > li:nth-child(7) {
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.gnb ul > li a{
+  margin: 0 30px;
+}
+.gnb ul li.txt_box a{
+  position: relative;
+  text-align: left;
+}
+
+.gnb ul li a .ico_dot{
+  position: absolute;
+  width: 8px;
+  height: 8px;
+}
+.gnb ul li.txt_box{
+  display: block;
+  margin-bottom: 20px;
+}
+.gnb ul li.txt_box:nth-of-type(2),
+.gnb ul li.txt_box:nth-of-type(4),
+.gnb ul li.txt_box:nth-of-type(7){
+  margin-bottom: 50px;
+}
+.gnb ul li:last-child{
+  margin-bottom: 0;
+}
+.gnb ul li .top_title{
+  display: block;
+  position: relative;
+}
+.gnb ul li .top_title::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #000;
+  transform:rotate(133deg);
+  transition: all .5s;
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.gnb ul li .top_title.on::after{
+  transform: rotate(-45deg);
+  top: 8px;
+  transition: all .5s;
+
+}
+.charator_box{
+  display: none;
+  margin: 30px 0;
+overflow: hidden;
+}
+.charator_box.on{
+  display: block;
+}
+
+.charator_box li{
+  /* display: inline-block;
+  width: 22%; */
+  float: left;
+  width: 20%;
+  font-size: 11px;
+  margin-right: 2%;
+  margin-bottom: 20px;
+}
+.charator_box li a{
+  text-align: center!important;
+  display: inline-block;
+  font-size: 13px;
+  margin: 0 0 0 20px!important;
+}
+.charator_box li:nth-of-type(4n){
+  margin-right: 0;
+}
+.charator_box li:last-child{
+  clear: both;
+}
+.charator_box li span{
+  display: block;
+  width: 45px;
+  height: 45px;
+  background-size: 45px 45px;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+
+.charator_box li:nth-child(1) span {
+  background-image: url("../img/character/character_20220531165251_96.png");
+}
+
+.charator_box li:nth-child(1):hover span {
+  background-image: url("../img/character/character_20220531165245_96.png");
+}
+
+
+.charator_box li:nth-child(2) span {
+  background-image: url("../img/character/character_20220531165311_96.png");
+}
+
+.charator_box li:nth-child(2):hover span {
+  background-image: url("../img/character/character_20220531165306_96.png");
+}
+
+.charator_box li:nth-child(3) span {
+  background-image: url("../img/character/character_20220531165333_96.png");
+}
+
+.charator_box li:nth-child(3):hover span {
+  background-image: url("../img/character/character_20220531165329_96.png");
+}
+
+.charator_box li:nth-child(4) span {
+  background-image: url("../img/character/character_20220531165353_96.png");
+}
+
+.charator_box li:nth-child(4):hover span {
+  background-image: url("../img/character/character_20220531165349_96.png");
+}
+
+.charator_box li:nth-child(5) span {
+  background-image: url("../img/character/character_20220531165418_96.png");
+}
+
+.charator_box li:nth-child(5):hover span {
+  background-image: url("../img/character/character_20220531165413_96.png");
+}
+
+.charator_box li:nth-child(6) span {
+  background-image: url("../img/character/character_20220531165457_96.png");
+}
+
+.charator_box li:nth-child(6):hover span {
+  background-image: url("../img/character/character_20220531165452_96.png");
+}
+
+.charator_box li:nth-child(7) span {
+  background-image: url("../img/character/character_jz_off.png");
+}
+
+.charator_box li:nth-child(7):hover span {
+  background-image: url("../img/character/character_jz_on.png");
+}
+
+.charator_box li:nth-child(8) span {
+  background-image: url("../img/character/character_con_off.png");
+}
+
+.charator_box li:nth-child(8):hover span {
+  background-image: url("../img/character/character_con_on.jpg");
+}
+
+
+.charator_box li:nth-child(9) span {
+  background-image: url("../img/character/character_chunsic_off.png");
+}
+
+.charator_box li:nth-child(9):hover span {
+  background-image: url("../img/character/character_chunsic_on.png");
+}
+
+
+.charator_box li:nth-child(10) span {
+  background-image: url("../img/character/character_zoordi_off.png");
+}
+
+.charator_box li:nth-child(10):hover span {
+  background-image: url("../img/character/character_zoordi_on.png");
+}
+
+.charator_box li:nth-child(11) span {
+  background-image: url("../img/character/character_scafi_off.png");
+}
+
+.charator_box li:nth-child(11):hover span {
+  background-image: url("../img/character/character_scafi_on.png");
+}
+
+
+.charator_box li:nth-child(12) span {
+  background-image: url("../img/character/character_angmond_off.png");
+}
+
+.charator_box li:nth-child(12):hover span {
+  background-image: url("../img/character/character_angmond_on.png");
+}
+
+
+.charator_box li:nth-child(13) span {
+  background-image: url("../img/character/character_fendar_off.png");
+}
+
+.charator_box li:nth-child(13):hover span {
+  background-image: url("../img/character/character_fendar_on.png");
+}
+
+
+.charator_box li:nth-child(14) span {
+  background-image: url("../img/character/character_kero_off.png");
+}
+
+.charator_box li:nth-child(14):hover span {
+  background-image: url("../img/character/character_kero_on.png");
+}
+
+
+.charator_box li:nth-child(15) span {
+  background-image: url("../img/character/character_kop_off.png");
+}
+
+.charator_box li:nth-child(15):hover span {
+  background-image: url("../img/character/character_kop_on.png");
+}
+
+.charator_box li:nth-child(16) span {
+  background-image: url("../img/character/character_bbana_off.png");
+}
+
+.charator_box li:nth-child(16):hover span {
+  background-image: url("../img/character/character_bbana_on.png");
+}
+
+.charator_box li:nth-child(17) span {
+  background-image: url("../img/character/character_20220531165949_OFF.jpg");
+}
+
+.charator_box li:nth-child(17):hover span {
+  background-image: url("../img/character/character_20220531165946_ON.jpg");
+}
+
+
+.category_box{
+  display: none;
+  margin: 30px 0;
+  overflow: hidden;
+}
+.category_box li a {
+  font-size: 14px;
+  padding-bottom: 10px;
+  display: block;
+}
+.category_box li:last-child a{
+  padding-bottom: 0;
+}
+.category_box.on{
+  display: block;
+}
+.category_box li{
+  display: inline-block;
+  width: 49%;
+}
+.banner{
+  background: url("../img/bn_addtalk.png")no-repeat center;
+  background-size: 100%;
+  padding: 20px 0;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
+.banner a{
+  font-size: 0;
+}
+
+.login_box{
+  text-align: center;
+  margin: 50px 0;
+}
+.login_box a{
+  color: #888;
+  font-size: 13px;
+}
+.login_box a::before{
+    content: "";
+    padding-left: 30px;
+    background: url(../img/ico_friends.png) no-repeat 0 0 / 700px 800px;
+    background-position: -558px -23px;
+    overflow: hidden;
+}
+
+/* 로그인 팝업 */
+.login_pop_back{
+    width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0,0,0,.5);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+.login_pop_back.on{
+
+  display: block;
+}
+.login_pop{
+  width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+.login_pop.on{
+  display: block;
+}
+.login_pop .inner{
+  width: 300px;
+    height: 320px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    letter-spacing: -1.5px;
+}
+
+.login_pop .inner img{
+  width: 130px;
+  display: block;
+  margin: 35px auto 10px;
+}
+.login_pop .inner a.close{
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 15px;
+  right: 13px;
+  font-size: 0;
+}
+.login_pop .inner a.close::before{
+  content: "";
+  display: block;
+  width: 20px;
+    height: 1px;
+    background: rgba(0, 0, 0, .6);
+    transform: rotate(45deg);
+    margin: 12px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0px;
+}
+.login_pop .inner a.close::after{
+  content: "";
+  display: block;
+  width: 20px;
+    height: 1px;
+    background: rgba(0, 0, 0, .6);
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 12px;
+    left: 0px;
+
+}
+
+
+.login_pop .inner b {
+  display: block;
+  font-size: 18px;
+}
+.login_pop .inner p{
+  margin: 10px 0 15px;
+  font-size: 14px;
+}
+
+
+.login_pop .btn_box{
+  background: #ffeb00;
+    width: 200px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+.login_pop .btn_box a{
+  display: inline-block;
+  height: 20px;
+  overflow: hidden;
+  padding-left: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -1.5px;
+  position: relative;
+
+}
+.login_pop .btn_box a::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background:url("../img/ico_friends.png") no-repeat 0 0 / 700px 800px;
+  background-position: -480px -21px;
+}
