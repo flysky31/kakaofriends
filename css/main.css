@@ -266,7 +266,7 @@ section{
 }
 
 .gnb ul > li a{
-  margin: 0 30px;
+  margin: 0 20px;
 }
 .gnb ul li.txt_box a{
   position: relative;
@@ -337,7 +337,7 @@ overflow: hidden;
   text-align: center!important;
   display: inline-block;
   font-size: 13px;
-  margin: 0 0 0 26px!important;
+  margin: 0 0 0 20px!important;
 }
 .charator_box li:nth-of-type(4n){
   margin-right: 0;
