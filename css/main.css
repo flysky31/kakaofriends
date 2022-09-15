@@ -2,6 +2,7 @@
 
 body{
   overflow: inherit;
+  min-width: 320px;
 }
 
 body.on{
