@@ -82,7 +82,7 @@ h1 a span { display:none; }
 .top_left > button { 
   padding: 0 0 0 10px;
   position: relative;
-    margin: 10px 0 0;
+  margin: 10px 0 0;
 
 }
 .top_left .ico_dot {
@@ -247,6 +247,25 @@ section{
   font-size: 13px;
   font-weight: bold;
   overflow-x: hidden;
+  position: relative;
+  padding: 0 10px;
+
+}
+
+
+
+.gnb .login a:last-child::after{
+  content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #000;
+    transform: rotate(45deg);
+    border-left: 0;
+    border-bottom: 0;
 }
 .gnb .basket{
   margin: 50px 0 30px;
