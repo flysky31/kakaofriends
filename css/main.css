@@ -82,6 +82,7 @@ h1 a span { display:none; }
 .top_left > button { 
   padding: 0 0 0 10px;
   position: relative;
+    margin: 10px 0 0;
 
 }
 .top_left .ico_dot {
